@@ -338,70 +338,70 @@ float value1; //declaring the values in the class so they can be used everywhere
     }                                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-       if(output.getText().isEmpty()) {
+       if(output.getText().isEmpty()) { //sets the output to 2 if the screen is empty
           output.setText(jButton2.getText());
           value1 = 2;
-      } else {
+      } else { //appends 2 to the output if there are already numbers on the screen
           output.setText(output.getText() + "" + jButton2.getText());
           value2 = 2;
       }
     }                                        
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-            if(output.getText().isEmpty()) {
+            if(output.getText().isEmpty()) { //sets the output to 3 if the screen is empty
           output.setText(jButton3.getText());
           value1 = 3;
-      } else {
+      } else { //appends 3 to the output if there are already numbers on the screen
           output.setText(output.getText() + "" + jButton3.getText());
           value2 = 3;
       }
     }                                        
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-           if(output.getText().isEmpty()) {
+           if(output.getText().isEmpty()) { //sets the output to 4 if the screen is empty
           output.setText(jButton4.getText());
           value1 = 4;
-      } else {
+      } else { //appends 4 to the output if there are already numbers on the screen
           output.setText(output.getText() + "" + jButton4.getText());
           value2 = 4;
       }
     }                                        
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-         if(output.getText().isEmpty()) {
+         if(output.getText().isEmpty()) { //sets the output to 5 if the screen is empty
           output.setText(jButton5.getText());
           value1 = 5;
-      } else {
+      } else { //appends 5 to the output if there are already numbers on the screen
           output.setText(output.getText() + "" + jButton5.getText());
           value2 = 5;
       }
     }                                        
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-            if(output.getText().isEmpty()) {
+            if(output.getText().isEmpty()) { //sets the output to 6 if the screen is empty
           output.setText(jButton6.getText());
           value1 = 6;
-      } else {
+      } else { //appends 6 to the output if there are already numbers on the screen
           output.setText(output.getText() + "" + jButton6.getText());
-          value2 = 6;
+          value2 = 6; //sets the 
       }
     }                                        
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-           if(output.getText().isEmpty()) {
+           if(output.getText().isEmpty()) { //sets the output to 7 if the screen is empty
           output.setText(jButton7.getText());
           value1 = 7;
-      } else {
+      } else { ///appends 7 to the output if there are already numbers on the screen.
           output.setText(output.getText() + "" + jButton7.getText());
           value2 = 7;
       }
     }                                        
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-              if(output.getText().isEmpty()) {
+              if(output.getText().isEmpty()) { //sets the output to 8 if the screen is empty
           output.setText(jButton8.getText());
           value1 = 8;
-      } else {
+      } else { //appends 8 to the output if there are already numbers on the screen.
           output.setText(output.getText() + "" + jButton8.getText());
           value2 = 8;
       }
@@ -411,46 +411,46 @@ float value1; //declaring the values in the class so they can be used everywhere
         if(output.getText().isEmpty()) {
             return;
         } else {
-            value1 = Integer.parseInt(output.getText());
+            value1 = Integer.parseInt(output.getText()); //appends the operator to the text if there are already numbers on the screen
             output.setText(output.getText() + " " + jButton14.getText());
-            operator = "plus";
+            operator = "plus"; //sets the value of operator to plus (used for the equals button)
         }
     }                                         
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-            if(output.getText().isEmpty()) {
+            if(output.getText().isEmpty()) {//doesn't allow an operator to be displayed if the screen is blank
             return;
         } else {
-            value1 = Integer.parseInt(output.getText());
+            value1 = Integer.parseInt(output.getText()); //apends the operator to the text if there are already numbers on the screen
             output.setText(output.getText() + " " + "% of");
-            operator = "plus";
+            operator = "percent";  //sets the value of operator to percent
         }
     }                                         
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        if(output.getText().isEmpty()) {
+        if(output.getText().isEmpty()) { //doesn't allow an operator to be displayed if the screen is blank
             return;
         } else {
-            value1 = Integer.parseInt(output.getText());
+            value1 = Integer.parseInt(output.getText()); //appends the operator to the text if there are already numbers on the screen
             output.setText(output.getText() + " " + jButton13.getText());
-            operator = "division";
+            operator = "division"; //sets the value of operator to division
         }
     }                                         
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {     //doesn't allow an operator to be displayed if the screen is blank                                      
            if(output.getText().isEmpty()) {
             return;
         } else {
-            value1 = Integer.parseInt(output.getText());
+            value1 = Integer.parseInt(output.getText()); //appends the operator to the text if there are already numbers on the screeen.
             output.setText(output.getText() + " " + jButton15.getText());
-            operator = "multiplication";
+            operator = "multiplication"; //sets the value of operator to multiplication
         }
     }                                         
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        double answer = 0;
+        double answer = 0; //create a new variable to display the answer
        
-        if(operator == "plus")
+        if(operator == "plus")        //checks the value of 'operator' and uses the corresponding operation
             answer = value1 + value2;
         else if(operator=="minus") 
             answer = value1 - value2;
@@ -463,32 +463,33 @@ float value1; //declaring the values in the class so they can be used everywhere
         else if (operator == "squareroot")
             answer = Math.sqrt(value1);
        
-        String result = Double.toString(answer);
-                output.setText(result); 
+        String result = Double.toString(answer); //converts the value of the answer to a string to be displayed on the output screen
+                output.setText(result);  //displays the string version of the answer on the otput screen
    
     }                                         
    
    
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        if (output.getText().isEmpty()) {
+        if (output.getText().isEmpty()) { //sets output to the memory function if the screen is empty
             output.setText(Float.toString(memoryvalue));
         } else {
-            output.setText(output.getText() + Float.toString(memoryvalue));
+            output.setText(output.getText() + Float.toString(memoryvalue)); //appends the memory value to the output screen if there are already numbers displayed
         }
     }                                         
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        memoryvalue = 0;
+        memoryvalue = 0; //sets the memory value to 0 when the MC button is pressed
+
     }                                         
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        float f = Float.parseFloat(output.getText());
-        memoryvalue = f;
+        float f = Float.parseFloat(output.getText()); //convets the string version of output into a float
+        memoryvalue = f; //sets the memory value to the value of f
     }                                         
 
     private void outputKeyTyped(java.awt.event.KeyEvent evt) {                                
-        char c = evt.getKeyChar();
+        char c = evt.getKeyChar(); //this code prevents letters from being typed on the output screen.
      
      if (!Character.isDigit(c)) { 
          evt.consume();
@@ -496,12 +497,12 @@ float value1; //declaring the values in the class so they can be used everywhere
     }                               
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-          if(output.getText().isEmpty()) {
+          if(output.getText().isEmpty()) { //doesnt allow an operator to be typed if the output screen is empty.
             return;
         } else {
-            value1 = Integer.parseInt(output.getText());
+            value1 = Integer.parseInt(output.getText()); //appends the operator to the output if there are already numbers displayed
             output.setText(output.getText() + " " + jButton22.getText());
-            operator = "squareroot";
+            operator = "squareroot"; //sets the value of operator to squareroot
         }
     }                                         
 
